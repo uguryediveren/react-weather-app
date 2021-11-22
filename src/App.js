@@ -32,17 +32,14 @@ const App = () => {
             .then(response => {
                 console.log("response", response)
                 setWeather(response.data)
-            }).
-            catch(error => {
+            }).catch(error => {
                 alert("Veri alınırken hata oluştu!")
             })
     }
 
     useEffect(() => {
-
         latitude && longitude && getWeatherData(latitude, longitude)
-
-
+        //eslint-disable-next-line
     }, [latitude, longitude])
 
     return (
